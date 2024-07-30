@@ -1,0 +1,9 @@
+class Solution:
+    def guessNumber(self, n: int) -> int:
+        s=1
+        while s <= n:
+            m = (n + s) // 2         
+            g = guess(m)              
+            if g == 0 : return m      
+            if g < 0  : n = m - 1    
+            if g > 0  : s = m + 1
